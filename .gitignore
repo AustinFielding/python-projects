@@ -2,4 +2,5 @@
 *.code-workspace
 
 # Jupyter checkpoint folders
+.ipynb_checkpoints
 .ipynb_checkpoints/
