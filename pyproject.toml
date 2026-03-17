@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "python-projects"
 version = "0.1.0"
-description = "Python practice: day projects and week projects"
+description = "Python projects: day projects and week projects"
 authors = ["Austin Fielding"]
 package-mode = false
 
