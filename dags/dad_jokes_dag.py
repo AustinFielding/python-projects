@@ -2,13 +2,13 @@ import pendulum
 from airflow import DAG
 from airflow.providers.standard.operators.bash import BashOperator
 
-# America/Phoenix = Arizona local time (no DST; always MST).
+local_tz = pendulum.timezone("America/Phoenix")
+
 with DAG(
     dag_id="dad_jokes_dag",
-    start_date=pendulum.datetime(2026, 3, 24, tz="America/Phoenix"),
+    start_date=pendulum.datetime(2026, 3, 24, 7, 0, tz=local_tz),
     schedule="0 7 * * *",
     catchup=False,
-    timezone=pendulum.timezone("America/Phoenix"),
     tags=["nas", "python"],
 ) as dag:
     run_dad_jokes = BashOperator(
