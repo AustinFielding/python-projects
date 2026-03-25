@@ -7,3 +7,7 @@
 
 # Local secrets (copy from .env.example; never commit .env)
 .env
+
+# Python bytecode
+__pycache__/
+*.py[cod]
